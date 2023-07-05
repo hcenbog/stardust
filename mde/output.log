@@ -1,0 +1,108 @@
+INFO [05-24|14:09:29.139] Starting Geth in ephemeral dev mode... 
+WARN [05-24|14:09:29.187] You are running Geth in --dev mode. Please note the following:
+
+  1. This mode is only intended for fast, iterative development without assumptions on
+     security or persistence.
+  2. The database is created in memory unless specified otherwise. Therefore, shutting down
+     your computer or losing power will wipe your entire block data and chain state for
+     your dev environment.
+  3. A random, pre-allocated developer account will be available and unlocked as
+     eth.coinbase, which can be used for testing. The random dev account is temporary,
+     stored on a ramdisk, and will be lost if your machine is restarted.
+  4. Mining is enabled by default. However, the client will only seal blocks if transactions
+     are pending in the mempool. The miner's minimum accepted gas price is 1.
+  5. Networking is disabled; there is no listen-address, the maximum number of peers is set
+     to 0, and discovery is disabled.
+ 
+INFO [05-24|14:09:29.191] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [05-24|14:09:29.203] Set global gas cap                       cap=50,000,000
+INFO [05-24|14:09:29.294] Using developer account                  address=0x74366F63eD16DB0C946cE09991Ea354bcA0c9602
+INFO [05-24|14:09:29.294] Using leveldb as the backing database 
+INFO [05-24|14:09:29.294] Allocated cache and file handles         database="D:\\zhuomian\\Personal\\毕设\\stardust\\mde\\ethereum\\geth\\chaindata" cache=512.00MiB handles=8192 readonly=true
+INFO [05-24|14:09:29.320] Using LevelDB as the backing database 
+INFO [05-24|14:09:29.325] Opened ancient database                  database="D:\\zhuomian\\Personal\\毕设\\stardust\\mde\\ethereum\\geth\\chaindata\\ancient/chain" readonly=true
+INFO [05-24|14:09:29.330] Allocated trie memory caches             clean=154.00MiB dirty=256.00MiB
+INFO [05-24|14:09:29.331] Using leveldb as the backing database 
+INFO [05-24|14:09:29.331] Allocated cache and file handles         database="D:\\zhuomian\\Personal\\毕设\\stardust\\mde\\ethereum\\geth\\chaindata" cache=512.00MiB handles=8192
+INFO [05-24|14:09:29.583] Using LevelDB as the backing database 
+INFO [05-24|14:09:29.730] Opened ancient database                  database="D:\\zhuomian\\Personal\\毕设\\stardust\\mde\\ethereum\\geth\\chaindata\\ancient/chain" readonly=false
+INFO [05-24|14:09:29.735] Initialising Ethereum protocol           network=1337 dbversion=8
+INFO [05-24|14:09:29.755]  
+INFO [05-24|14:09:29.755] --------------------------------------------------------------------------------------------------------------------------------------------------------- 
+INFO [05-24|14:09:29.755] Chain ID:  1337 (unknown) 
+INFO [05-24|14:09:29.755] Consensus: Clique (proof-of-authority) 
+INFO [05-24|14:09:29.755]  
+INFO [05-24|14:09:29.755] Pre-Merge hard forks (block based): 
+INFO [05-24|14:09:29.755]  - Homestead:                   #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/homestead.md) 
+INFO [05-24|14:09:29.755]  - Tangerine Whistle (EIP 150): #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/tangerine-whistle.md) 
+INFO [05-24|14:09:29.755]  - Spurious Dragon/1 (EIP 155): #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/spurious-dragon.md) 
+INFO [05-24|14:09:29.755]  - Spurious Dragon/2 (EIP 158): #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/spurious-dragon.md) 
+INFO [05-24|14:09:29.755]  - Byzantium:                   #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/byzantium.md) 
+INFO [05-24|14:09:29.755]  - Constantinople:              #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/constantinople.md) 
+INFO [05-24|14:09:29.755]  - Petersburg:                  #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/petersburg.md) 
+INFO [05-24|14:09:29.755]  - Istanbul:                    #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/istanbul.md) 
+INFO [05-24|14:09:29.755]  - Muir Glacier:                #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/muir-glacier.md) 
+INFO [05-24|14:09:29.755]  - Berlin:                      #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/berlin.md) 
+INFO [05-24|14:09:29.755]  - London:                      #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/london.md) 
+INFO [05-24|14:09:29.755]  
+INFO [05-24|14:09:29.755] The Merge is not yet available for this network! 
+INFO [05-24|14:09:29.756]  - Hard-fork specification: https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md 
+INFO [05-24|14:09:29.756]  
+INFO [05-24|14:09:29.756] Post-Merge hard forks (timestamp based): 
+INFO [05-24|14:09:29.756]  
+INFO [05-24|14:09:29.756] --------------------------------------------------------------------------------------------------------------------------------------------------------- 
+INFO [05-24|14:09:29.756]  
+INFO [05-24|14:09:29.756] Loaded most recent local block           number=135 hash=6ae5ed..7f1ee6 td=271 age=2d20h38m
+INFO [05-24|14:09:29.785] Loaded local transaction journal         transactions=0 dropped=0
+INFO [05-24|14:09:29.788] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [05-24|14:09:29.789] Gasprice oracle is ignoring threshold set threshold=2
+WARN [05-24|14:09:29.789] Unclean shutdown detected                booted=2023-05-02T20:26:36+0800 age=3w17h42m
+WARN [05-24|14:09:29.789] Unclean shutdown detected                booted=2023-05-02T20:26:56+0800 age=3w17h42m
+WARN [05-24|14:09:29.789] Unclean shutdown detected                booted=2023-05-02T20:27:28+0800 age=3w17h42m
+WARN [05-24|14:09:29.789] Unclean shutdown detected                booted=2023-05-02T20:41:36+0800 age=3w17h27m
+WARN [05-24|14:09:29.789] Unclean shutdown detected                booted=2023-05-03T21:00:21+0800 age=2w6d17h
+WARN [05-24|14:09:29.789] Unclean shutdown detected                booted=2023-05-04T10:26:12+0800 age=2w6d3h
+WARN [05-24|14:09:29.790] Unclean shutdown detected                booted=2023-05-12T17:35:33+0800 age=1w4d20h
+WARN [05-24|14:09:29.790] Engine API enabled                       protocol=eth
+WARN [05-24|14:09:29.790] Engine API started but chain not configured for merge yet 
+INFO [05-24|14:09:29.790] Starting peer-to-peer node               instance=Geth/v1.11.6-stable-ea9e62ca/windows-amd64/go1.20.3
+WARN [05-24|14:09:29.790] P2P server will be useless, neither dialing nor listening 
+INFO [05-24|14:09:29.998] New local node record                    seq=1,682,994,557,737 id=d5a090881126a279 ip=127.0.0.1 udp=0 tcp=0
+INFO [05-24|14:09:29.998] Started P2P networking                   self=enode://f3df13eb936d5dc42242cd07015c938d2ac2a018d62dfaa991b721e1787c0604fe606bfa317faa5b8e7aeeabb90dc09c4b6418c5c18ab5692174a3614d9baf18@127.0.0.1:0
+INFO [05-24|14:09:29.999] IPC endpoint opened                      url=\\.\pipe\geth.ipc
+ERROR[05-24|14:09:29.999] Unavailable modules in HTTP API list     unavailable=[clef] available="[admin debug web3 eth txpool personal clique miner net]"
+INFO [05-24|14:09:30.000] Loaded JWT secret file                   path="D:\\zhuomian\\Personal\\毕设\\stardust\\mde\\ethereum\\geth\\jwtsecret" crc32=0x4a5dc050
+INFO [05-24|14:09:30.003] HTTP server started                      endpoint=127.0.0.1:8545 auth=false prefix= cors=https://remix.ethereum.org vhosts=localhost
+INFO [05-24|14:09:30.018] WebSocket enabled                        url=ws://127.0.0.1:8551
+INFO [05-24|14:09:30.018] HTTP server started                      endpoint=127.0.0.1:8551 auth=true  prefix= cors=localhost                  vhosts=localhost
+INFO [05-24|14:09:30.018] Transaction pool price threshold updated price=0
+INFO [05-24|14:09:30.018] Updated mining threads                   threads=0
+INFO [05-24|14:09:30.018] Transaction pool price threshold updated price=1
+INFO [05-24|14:09:30.019] Commit new sealing work                  number=136 sealhash=5fa8e9..a120d4 uncles=0 txs=0 gas=0 fees=0 elapsed="567.7µs"
+WARN [05-24|14:09:30.019] Block sealing failed                     err="sealing paused while waiting for transactions"
+INFO [05-24|14:09:30.019] Commit new sealing work                  number=136 sealhash=5fa8e9..a120d4 uncles=0 txs=0 gas=0 fees=0 elapsed="567.7µs"
+INFO [05-24|14:17:52.151] Setting new local account                address=0x74366F63eD16DB0C946cE09991Ea354bcA0c9602
+INFO [05-24|14:17:52.151] Submitted contract creation              hash=0x20fe53f2115bd105a69f928c1af77b66614166eee12e8a56d8006acfe3bf0e3e from=0x74366F63eD16DB0C946cE09991Ea354bcA0c9602 nonce=200 contract=0x94B508f8b54d30A7Bc49E1601E8BdFe15FbAb0eB value=0
+INFO [05-24|14:17:52.152] Commit new sealing work                  number=136 sealhash=cef2f7..41bf56 uncles=0 txs=1 gas=708,769 fees=0.0017719225 elapsed=1.102ms
+INFO [05-24|14:17:52.156] Successfully sealed new block            number=136 sealhash=cef2f7..41bf56 hash=3bc3f1..6ac321 elapsed=3.313ms
+INFO [05-24|14:17:52.156] "🔨 mined potential block"                number=136 hash=3bc3f1..6ac321
+INFO [05-24|14:17:52.157] Commit new sealing work                  number=137 sealhash=7d5c09..4e0b39 uncles=0 txs=0 gas=0       fees=0            elapsed="570.4µs"
+WARN [05-24|14:17:52.157] Block sealing failed                     err="sealing paused while waiting for transactions"
+INFO [05-24|14:17:52.157] Commit new sealing work                  number=137 sealhash=7d5c09..4e0b39 uncles=0 txs=0 gas=0       fees=0            elapsed="570.4µs"
+INFO [05-24|14:27:09.209] Got interrupt, shutting down... 
+INFO [05-24|14:27:09.209] HTTP server stopped                      endpoint=127.0.0.1:8545
+INFO [05-24|14:27:09.210] HTTP server stopped                      endpoint=127.0.0.1:8551
+INFO [05-24|14:27:09.210] IPC endpoint closed                      url=\\.\pipe\geth.ipc
+INFO [05-24|14:27:09.210] Ethereum protocol stopped 
+INFO [05-24|14:27:09.210] Transaction pool stopped 
+INFO [05-24|14:27:09.213] Writing cached state to disk             block=136 hash=3bc3f1..6ac321 root=6cf82a..95ceed
+INFO [05-24|14:27:09.214] Persisted trie from memory database      nodes=8 size=1.71KiB time=0s gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [05-24|14:27:09.214] Writing cached state to disk             block=135 hash=6ae5ed..7f1ee6 root=ec79b0..35926a
+INFO [05-24|14:27:09.214] Persisted trie from memory database      nodes=0 size=0.00B   time=0s gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [05-24|14:27:09.214] Writing cached state to disk             block=9   hash=059cd0..4d4253 root=1e4899..45cf13
+INFO [05-24|14:27:09.214] Persisted trie from memory database      nodes=0 size=0.00B   time=0s gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [05-24|14:27:09.214] Writing snapshot state to disk           root=625c31..f590b4
+INFO [05-24|14:27:09.214] Persisted trie from memory database      nodes=0 size=0.00B   time=0s gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [05-24|14:27:09.214] Writing clean trie cache to disk         path="D:\\zhuomian\\Personal\\毕设\\stardust\\mde\\ethereum\\geth\\triecache" threads=12
+INFO [05-24|14:27:09.248] Persisted the clean trie cache           path="D:\\zhuomian\\Personal\\毕设\\stardust\\mde\\ethereum\\geth\\triecache" elapsed=33.691ms
+INFO [05-24|14:27:09.248] Blockchain stopped 

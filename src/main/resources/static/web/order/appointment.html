@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!--edge浏览器H5兼容设置-->
+		<meta content="IE=edge" http-equiv="X-UA-Compatible">
+		<!--360浏览器H5兼容设置-->
+		<meta content="webkit" name="renderer" />
+		<title>钢板在线商城</title>
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<!--导入核心文件-->
+		<link href="../../js/holder.js" rel="stylesheet" type="text/css">
+		<link href="../../common/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+		<script src="../../common/jquery/jquery-3.6.1.min.js"></script>
+		<script src="../../common/bootstrap/js/bootstrap.js"></script>
+		<!-- 其余内容 -->
+		<link href="../../common/iconfont/css/iconfont.css" rel="stylesheet" />
+		<link href="../../css/layout.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/footer.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/top.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<!--头部-->
+		<header class="header">
+			<!--钢材商城logo-->
+			<div class="row">
+				<div class="col-md-3">
+					<a href="../../index.html">
+						<img alt=" " src="../../images/stumalllogo.png" />
+					</a>
+				</div>
+				<!--快捷选项-->
+				<div class="col-md-9 top-item">
+					<ul class="list-inline pull-right">
+						<li><a href="cart.html"><span class="iconfont icon-gouwuche"></span>&nbsp;购物车</a></li>
+						<li class="li-split">|</li>
+						<li>
+							<!--下列列表按钮 ：管理-->
+							<div class="btn-group">
+								<button class="btn btn-link dropdown-toggle" data-toggle="dropdown" type="button">
+									<span id="top-dropdown-btn"><span class="iconfont icon-guanli"></span>&nbsp;管理 <span
+											class="caret"></span></span>
+								</button>
+								<ul class="dropdown-menu top-dropdown-ul" role="menu">
+									<li><a href="../../web/order/forgetPwd.html"><span
+												class="iconfont icon-xiugai"></span>&nbsp;修改密码</a></li>
+									<li><a href="../../web/order/publish.html"><span
+												class="iconfont icon-geren"></span>&nbsp;个人资料</a>
+									</li>
+									<li><a href="../../web/order/upload.html"><span
+												class="iconfont icon-shangchuan"></span>&nbsp;上传头像</a></li>
+									<li><a href="../../web/order/address.html"><span
+												class="iconfont icon-shouhuo"></span>&nbsp;收货管理</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="li-split">|</li>
+						<li><a href="../../web/user/UserLogin.html"><span
+									class="iconfont icon-denglu"></span>&nbsp;登录</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<!--导航 -->
+		<!--分割导航和顶部-->
+		<div class="row top-nav">
+			<div class="col-md-6">
+				<ul class="nav nav-pills">
+					<li>
+						<a href="#"></a>
+					</li>
+					<li style="background-color:#d8d0d0;"><a href="../../index.html"><span
+								class="iconfont icon-zhuye"></span></a></li>
+					<li><a href="../../index.html">首页</a></li>
+					<li><a href="../bid/shopping.html">商城</a></li>
+					<li><a href="../new/news.html"><b>新闻</b></a></li>
+					<li class="active"><a href="../order/appointment.html">预约提货</a></li>
+				</ul>
+			</div>
+    <div class="col-md-6">
+        <form class="form-inline pull-right" id="searchForm" role="form">
+            <div class="form-group">
+                <input class="form-control" id="searchBox" placeholder="请输入商品名称进行搜索"
+                       type="text">
+            </div>
+            <button class="btn btn-default btn-sm" id="searchBtn"><span
+                    class="iconfont icon-sousuo"></span></button>
+        </form>
+    </div>
+		</div>
+		<!--头部结束-->
+		<div class="container" style="background-color:#e7d6d6;">
+			<h1>预约提货</h1>
+			<form id="appointmentForm">
+				<div class="form-group">
+					<label for="name">预约名:</label>
+					<input class="form-control" id="name" placeholder="Enter name" required type="text">
+				</div>
+				<div class="form-group">
+					<label for="phone">预约电话:</label>
+					<input class="form-control" id="phone" placeholder="Enter phone" required type="text">
+				</div>
+				<div class="form-group">
+					<label for="address">取货地址:</label>
+					<input class="form-control" id="address" placeholder="Enter address" required type="text">
+				</div>
+				<div class="form-group">
+					<label for="pickupTime">取货时间:</label>
+					<input class="form-control" id="pickupTime" required type="datetime-local">
+				</div>
+				<button class="btn btn-primary" id="btn-add-new" type="submit">提交</button>
+			</form>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>提货人姓名</th>
+						<th>联系电话</th>
+						<th>提货地址</th>
+						<th>提货时间</th>
+						<th>提货状态</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody id="appointmentTableBody">
+				</tbody>
+			</table>
+		</div>
+		<!--页脚开始-->
+		<div class="clearfix"></div>
+		<footer class="footer">
+			<!-- 品质保障，私人定制等-->
+			<div class="text-center rights container">
+				<div class="col-md-offset-2 col-md-2">
+					<span class="iconfont icon-fuwu"></span>
+					<p>高质服务</p>
+				</div>
+				<div class="col-md-2">
+					<span class="iconfont icon-baozhang"></span>
+					<p>身份保障</p>
+				</div>
+				<div class="col-md-2">
+					<span class="iconfont icon-yunshuanquan"></span>
+					<p>运输安全</p>
+				</div>
+				<div class="col-md-2">
+					<span class="iconfont icon-jiaoyi"></span>
+					<p>交易安全</p>
+				</div>
+			</div>
+			<div class="container beforeBottom">
+				<div class="col-md-offset-1 col-md-3">
+					<div><img alt="" class="footLogo" src="../../images/stumalllogo.png" /></div>
+				</div>
+				<div class="col-md-4 callus text-center">
+					<div class="col-md-4">
+						<ul>
+							<li><a href="#">
+									<p>买家帮助</p>
+								</a></li>
+							<li><a href="#">新手指南</a></li>
+							<li><a href="#">服务保障</a></li>
+							<li><a href="#">常见问题</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<ul>
+							<li><a href="#">
+									<p>商家帮助</p>
+								</a></li>
+							<li><a href="#">商家入驻</a></li>
+							<li><a href="#">商家后台</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<ul>
+							<li><a href="#">
+									<p>关于我们</p>
+								</a></li>
+							<li><a href="#">关于网站</a></li>
+							<li><a href="#">联系我们</a></li>
+							<li>
+								<span class="iconfont icon-weixin"></span>
+								<span class="iconfont icon-weibo"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- 页面底部-备案号 #footer -->
+			<div class="col-md-12 text-center bottom">
+				© 2023 京ICP备08963888号-45 <a href="#" target="_blank">钢板有限公司</a> 版权所有
+			</div>
+		</footer>
+		<!--页脚结束-->
+		<script>
+			$(document).ready(function() {
+				// Load all appointments
+				$.get("/appointments", function(data) {
+					$.each(data, function(index, appointment) {
+						var row = "<tr><td>" + appointment.id + "</td><td>" + appointment.name +
+							"</td><td>" + appointment.phone + "</td><td>" + appointment.address +
+							"</td><td>" + appointment.pickupTime + "</td><td>" + appointment.status +
+							"</td><td><button class='btn btn-danger delete' data-id='" + appointment.id +
+							"'>删除</button></td></tr>";
+						$("tbody").append(row);
+					});
+				});
+				// 提交预约信息
+				$("form").submit(function(event) {
+					event.preventDefault();
+					var name = $("#name").val();
+					var phone = $("#phone").val();
+					var address = $("#address").val();
+					var pickupTime = $("#pickupTime").val();
+					var appointment = {
+						name: name,
+						phone: phone,
+						address: address,
+						pickupTime: pickupTime
+					};
+					$.ajax({
+						url: "/appointments",
+						type: "POST",
+						data: JSON.stringify(appointment),
+						contentType: "application/json; charset=utf-8",
+						dataType: "json",
+						success: function() {
+							alert("Appointment added successfully!");
+							location.href = "/appointments.html";
+						},
+						error: function() {
+							alert("上传成功");
+						}
+					});
+				});
+
+				// 修改预约信息
+				$(document).on("click", ".updateAppointmentBtn", function() {
+					var id = $(this).data("id");
+					var appointment = {
+						name: $("#name_" + id).val(),
+						phone: $("#phone_" + id).val(),
+						address: $("#address_" + id).val(),
+						pickupTime: $("#pickupTime_" + id).val(),
+						status: $("#status_" + id).val(),
+					};
+					$.ajax({
+						url: "/appointments/" + id,
+						type: "PUT",
+						data: JSON.stringify(appointment),
+						contentType: "application/json",
+						success: function(data) {
+							renderAppointment(data);
+						}
+					});
+				});
+				// Delete appointment
+				$("table").on("click", ".delete", function() {
+					var id = $(this).data("id");
+					$.ajax({
+						url: "/appointments/" + id,
+						type: "DELETE",
+						success: function() {
+							location.reload();
+						}
+					});
+
+					// 渲染预约信息
+					function renderAppointment(appointment) {
+						var tr = $("<tr>").attr("id", "appointment_" + appointment.id);
+						tr.append($("<td>").text(appointment.id));
+						tr.append($("<td>").append($("<input>").attr({
+							type: "text",
+							class: "form-control",
+							id: "name_" + appointment.id,
+							value: appointment.name,
+						})));
+						tr.append($("<td>").append($("<input>").attr({
+							type: "text",
+							class: "form-control",
+							id: "phone_" + appointment.id,
+							value: appointment.phone,
+						})));
+						tr.append($("<td>").append($("<input>").attr({
+							type: "text",
+							class: "form-control",
+							id: "address_" + appointment.id,
+							value: appointment.address,
+						})));
+						tr.append($("<td>").append($("<input>").attr({
+							type: "datetime-local",
+							class: "form-control",
+							id: "pickupTime_" + appointment.id,
+							value: appointment.pickupTime,
+						})));
+						tr.append($("<td>").append($("<select>").attr({
+							class: "form-control",
+							id: "status_" + appointment.id,
+						}).append($("<option>").attr({
+							value: "待提货",
+							selected: appointment.status === "待提货",
+						}).text("待提货")).append($("<option>").attr({
+							value: "已提货",
+							selected: appointment.status === "已提货",
+						}).text("已提货"))));
+						tr.append($("<td>").append($("<button>").attr({
+							class: "btn btn-primary updateAppointmentBtn",
+							"data-id": appointment.id,
+						}).text("修改")).append($("<button>").attr({
+							class: "btn btn-danger deleteAppointmentBtn",
+							"data-id": appointment.id,
+						}).text("删除")));
+						$("#appointmentTableBody").append(tr);
+					}
+				});
+			});
+			   //搜索
+    $(document).ready(function () {
+        $("#searchForm").on("submit", function (event) {
+            event.preventDefault();
+            searchProducts();
+        });
+    });
+    function searchProducts() {
+        var keyword = $("#searchBox").val();
+        $.ajax({
+            url: "/products/search",
+            method: "GET",
+            data: {keyword: keyword},
+            success: function (response) {
+                localStorage.setItem("searchResults", JSON.stringify(response));
+                localStorage.setItem("searchKeyword", keyword);
+                window.location.href = "../search.html";
+            },
+            error: function (error) {
+                console.error("Error:", error);
+            }
+        });
+    }
+
+		</script>
+	</body>
+</html>

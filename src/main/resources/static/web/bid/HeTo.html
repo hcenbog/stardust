@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!--edge浏览器H5兼容设置-->
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <!--360浏览器H5兼容设置-->
+    <meta content="webkit" name="renderer"/>
+    <title>钢板在线商城</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!--导入核心文件-->
+    <link href="../../js/holder.js" rel="stylesheet" type="text/css">
+    <link href="../../common/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="../../common/jquery/jquery-3.6.1.min.js"></script>
+    <script src="../../common/bootstrap/js/bootstrap.js"></script>
+    <script src="../../js/generateKeyPair.js" type="module"></script>
+    <!-- 其余内容 -->
+    <link href="../../common/iconfont/css/iconfont.css" rel="stylesheet"/>
+    <link href="../../css/layout.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/footer.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/top.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/orderConfirm.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/cart.css" rel="stylesheet" type="text/css"/>
+    <style>
+        .order-bar {
+            background-color: #337ab7;
+            color: #ffffff;
+            padding: 10px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .order-bar-undo {
+            background-color: #d9edf7;
+            color: #31708f;
+        }
+
+        .fa-chevron-right {
+            font-size: 10px;
+        }
+
+        .fa-chevron-right:before {
+            content: "\f054";
+            font-family: FontAwesome;
+        }
+
+        .arrow-right {
+            position: absolute;
+            top: 50%;
+            right: -10px;
+            transform: translateY(-50%);
+            background-color: #337ab7;
+            width: 20px;
+            height: 20px;
+            clip-path: polygon(0 0, 100% 50%, 0 100%);
+        }
+    </style>
+</head>
+<body>
+<!--头部-->
+<header class="header">
+    <!--钢材商城logo-->
+    <div class="row">
+        <div class="col-md-3">
+            <a href="../../index.html">
+                <img alt=" " src="../../images/stumalllogo.png"/>
+            </a>
+        </div>
+        <!--快捷选项-->
+        <div class="col-md-9 top-item">
+            <ul class="list-inline pull-right">
+                <li><a href="cart.html"><span class="iconfont icon-gouwuche"></span>&nbsp;购物车</a></li>
+                <li class="li-split">|</li>
+                <li>
+                    <!--下列列表按钮 ：管理-->
+                    <div class="btn-group">
+                        <button class="btn btn-link dropdown-toggle" data-toggle="dropdown" type="button">
+									<span id="top-dropdown-btn"><span
+                                            class="iconfont icon-guanli"></span>&nbsp;管理 <span
+                                            class="caret"></span></span>
+                        </button>
+                        <ul class="dropdown-menu top-dropdown-ul" role="menu">
+                            <li><a href="../../web/order/forgetPwd.html"><span
+                                    class="iconfont icon-xiugai"></span>&nbsp;修改密码</a></li>
+                            <li><a href="../../web/order/publish.html"><span
+                                    class="iconfont icon-geren"></span>&nbsp;个人资料</a>
+                            </li>
+                            <li><a href="../../web/order/upload.html"><span
+                                    class="iconfont icon-shangchuan"></span>&nbsp;上传头像</a></li>
+                            <li><a href="../../web/order/address.html"><span
+                                    class="iconfont icon-shouhuo"></span>&nbsp;收货管理</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="li-split">|</li>
+                <li><a href="../../web/user/UserLogin.html"><span
+                        class="iconfont icon-denglu"></span>&nbsp;登录</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!--导航 -->
+<!--分割导航和顶部-->
+<div class="row top-nav">
+    <div class="col-md-6">
+        <ul class="nav nav-pills">
+            <li>
+                <a href="#"></a>
+            </li>
+            <li style="background-color:#d8d0d0;"><a href="../../index.html"><span
+                    class="iconfont icon-zhuye"></span></a></li>
+            <li><a href="../../index.html">首页</a></li>
+            <li><a href="shopping.html">商城</a></li>
+            <li><a href="../new/news.html">新闻</a></li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <form action="../../search.html" class="form-inline pull-right" role="form">
+            <div class="form-group">
+                <input class="form-control" id="search" name="search" placeholder="请输入商品名称进行搜索" type="text">
+            </div>
+            <button class="btn btn-default btn-sm" type="submit"><span
+                    class="iconfont icon-sousuo"></span></button>
+        </form>
+    </div>
+    <div class="col-md-6">
+        <form class="form-inline pull-right" id="searchForm" role="form">
+            <div class="form-group">
+                <input class="form-control" id="searchBox" placeholder="请输入商品名称进行搜索"
+                       type="text">
+            </div>
+            <button class="btn btn-default btn-sm" id="searchBtn"><span
+                    class="iconfont icon-sousuo"></span></button>
+        </form>
+    </div>
+</div>
+<!--头部结束-->
+<!--导航结束-->
+<!--结算状态栏-->
+<div class="container">
+    <div class="col-md-offset-1 col-md-10">
+        <div class="col-md-3">
+            <div class="col-md-12 order-bar-undo">
+                1.确认订单信息
+                <span class="pull-right"><span class="iconfont icon-xiangyou1"></span></span>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="col-md-12 order-bar-active">
+                2.创建账户
+                <span class="pull-right"><span class="iconfont icon-xiangyou1"></span></span>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="col-md-12 order-bar-undo">
+                3.付款成功
+                <span class="pull-right"><span class="iconfont icon-xiangyou1"></span></span>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="col-md-12 order-bar-undo">
+                3.预约取货
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-container panel panel-primary">
+                <div class="panel-heading">
+                    <p class="text-center">创建交易账户</p>
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal" id="registerForm">
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button class="btn btn-primary" id="registerButton" type="button">注册并下载私钥
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button class="btn btn-default" id="payButton">直接跳转到支付页面</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--页脚开始-->
+<div class="clearfix"></div>
+<footer class="footer">
+    <!-- 品质保障，私人定制等-->
+    <div class="text-center rights container">
+        <div class="col-md-offset-2 col-md-2">
+            <span class="iconfont icon-fuwu"></span>
+            <p>高质服务</p>
+        </div>
+        <div class="col-md-2">
+            <span class="iconfont icon-baozhang"></span>
+            <p>身份保障</p>
+        </div>
+        <div class="col-md-2">
+            <span class="iconfont icon-yunshuanquan"></span>
+            <p>运输安全</p>
+        </div>
+        <div class="col-md-2">
+            <span class="iconfont icon-jiaoyi"></span>
+            <p>交易安全</p>
+        </div>
+    </div>
+    <div class="container beforeBottom">
+        <div class="col-md-offset-1 col-md-3">
+            <div><img alt="" class="footLogo" src="../../images/stumalllogo.png"/></div>
+        </div>
+        <div class="col-md-4 callus text-center">
+            <div class="col-md-4">
+                <ul>
+                    <li><a href="#">
+                        <p>买家帮助</p>
+                    </a></li>
+                    <li><a href="#">新手指南</a></li>
+                    <li><a href="#">服务保障</a></li>
+                    <li><a href="#">常见问题</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul>
+                    <li><a href="#">
+                        <p>商家帮助</p>
+                    </a></li>
+                    <li><a href="#">商家入驻</a></li>
+                    <li><a href="#">商家后台</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul>
+                    <li><a href="#">
+                        <p>关于我们</p>
+                    </a></li>
+                    <li><a href="#">关于网站</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li>
+                        <span class="iconfont icon-weixin"></span>
+                        <span class="iconfont icon-weibo"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 页面底部-备案号 #footer -->
+    <div class="col-md-12 text-center bottom">
+        © 2023 京ICP备08963888号-45 <a href="#" target="_blank">钢板有限公司</a> 版权所有
+    </div>
+</footer>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#payButton').on('click', function (event) {
+            event.preventDefault();
+            $.get("/orders/addSteel", function (response) {
+                alert(response);
+                location.href = "../bcs/buy/pay.html";
+            });
+        });
+    });
+    $('#registerButton').on('click', function (e) {
+        e.preventDefault();
+        window.location.href = "/api/createAccountAndDownloadPrivateKey";
+    });
+
+    //搜索
+    $(document).ready(function () {
+        $("#searchForm").on("submit", function (event) {
+            event.preventDefault();
+            searchProducts();
+        });
+    });
+
+    function searchProducts() {
+        var keyword = $("#searchBox").val();
+        $.ajax({
+            url: "/products/search",
+            method: "GET",
+            data: {keyword: keyword},
+            success: function (response) {
+                localStorage.setItem("searchResults", JSON.stringify(response));
+                localStorage.setItem("searchKeyword", keyword);
+                window.location.href = "../order/search.html";
+            },
+            error: function (error) {
+                console.error("Error:", error);
+            }
+        });
+    }
+</script>
+</body>
+</html>

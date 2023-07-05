@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace属性：用于指定当前的映射文件和那个接口进行映射，需要指定接口的文件路径，需要标注标注包的完整路径-->
+<mapper namespace="com.example.stardust.mapper.OrderItemMapper">
+    <insert id="insertOrderItem" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO t_order_item (pid, name, username, price, num, created_user,
+                                  created_time, modified_user, modified_time)
+        VALUES (#{pid}, #{name}, #{username}, #{price}, #{num}, #{createdUser},
+                #{createdTime}, #{modifiedUser}, #{modifiedTime})
+    </insert>
+    <select id="findByList" resultType="com.example.stardust.entity.OrderItem">
+        SELECT *
+        FROM t_order_item
+        WHERE id = #{id}
+    </select>
+    <select id="getOrderById" resultType="com.example.stardust.entity.OrderItem">
+        SELECT *
+        FROM t_order_item
+        WHERE id = #{id}
+    </select>
+</mapper>

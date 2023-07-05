@@ -1,0 +1,113 @@
+INFO [05-02|20:43:24.434] Starting Geth in ephemeral dev mode... 
+WARN [05-02|20:43:24.465] You are running Geth in --dev mode. Please note the following:
+
+  1. This mode is only intended for fast, iterative development without assumptions on
+     security or persistence.
+  2. The database is created in memory unless specified otherwise. Therefore, shutting down
+     your computer or losing power will wipe your entire block data and chain state for
+     your dev environment.
+  3. A random, pre-allocated developer account will be available and unlocked as
+     eth.coinbase, which can be used for testing. The random dev account is temporary,
+     stored on a ramdisk, and will be lost if your machine is restarted.
+  4. Mining is enabled by default. However, the client will only seal blocks if transactions
+     are pending in the mempool. The miner's minimum accepted gas price is 1.
+  5. Networking is disabled; there is no listen-address, the maximum number of peers is set
+     to 0, and discovery is disabled.
+ 
+INFO [05-02|20:43:24.467] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [05-02|20:43:24.473] Set global gas cap                       cap=50,000,000
+INFO [05-02|20:43:24.670] Using developer account                  address=0x227eaF314D090160e56975Bb2A4c07DAccda7D28
+INFO [05-02|20:43:24.671] Using leveldb as the backing database 
+INFO [05-02|20:43:24.671] Allocated cache and file handles         database=D:\zhuomian\sol\mde\ethereum\keystore\ethereum\geth\chaindata cache=512.00MiB handles=8192
+INFO [05-02|20:43:24.805] Using LevelDB as the backing database 
+INFO [05-02|20:43:25.179] Opened ancient database                  database=D:\zhuomian\sol\mde\ethereum\keystore\ethereum\geth\chaindata\ancient/chain readonly=false
+INFO [05-02|20:43:25.180] Freezer shutting down 
+INFO [05-02|20:43:25.467] Allocated trie memory caches             clean=154.00MiB dirty=256.00MiB
+INFO [05-02|20:43:25.467] Using leveldb as the backing database 
+INFO [05-02|20:43:25.467] Allocated cache and file handles         database=D:\zhuomian\sol\mde\ethereum\keystore\ethereum\geth\chaindata cache=512.00MiB handles=8192
+INFO [05-02|20:43:25.654] Using LevelDB as the backing database 
+INFO [05-02|20:43:25.739] Opened ancient database                  database=D:\zhuomian\sol\mde\ethereum\keystore\ethereum\geth\chaindata\ancient/chain readonly=false
+INFO [05-02|20:43:25.741] Initialising Ethereum protocol           network=1337 dbversion=<nil>
+INFO [05-02|20:43:25.743] Writing custom genesis block 
+INFO [05-02|20:43:25.744] Persisted trie from memory database      nodes=12 size=1.82KiB time="541µs" gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [05-02|20:43:25.745]  
+INFO [05-02|20:43:25.745] --------------------------------------------------------------------------------------------------------------------------------------------------------- 
+INFO [05-02|20:43:25.745] Chain ID:  1337 (unknown) 
+INFO [05-02|20:43:25.745] Consensus: Clique (proof-of-authority) 
+INFO [05-02|20:43:25.745]  
+INFO [05-02|20:43:25.745] Pre-Merge hard forks (block based): 
+INFO [05-02|20:43:25.745]  - Homestead:                   #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/homestead.md) 
+INFO [05-02|20:43:25.745]  - Tangerine Whistle (EIP 150): #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/tangerine-whistle.md) 
+INFO [05-02|20:43:25.745]  - Spurious Dragon/1 (EIP 155): #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/spurious-dragon.md) 
+INFO [05-02|20:43:25.745]  - Spurious Dragon/2 (EIP 158): #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/spurious-dragon.md) 
+INFO [05-02|20:43:25.745]  - Byzantium:                   #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/byzantium.md) 
+INFO [05-02|20:43:25.745]  - Constantinople:              #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/constantinople.md) 
+INFO [05-02|20:43:25.745]  - Petersburg:                  #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/petersburg.md) 
+INFO [05-02|20:43:25.745]  - Istanbul:                    #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/istanbul.md) 
+INFO [05-02|20:43:25.745]  - Muir Glacier:                #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/muir-glacier.md) 
+INFO [05-02|20:43:25.745]  - Berlin:                      #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/berlin.md) 
+INFO [05-02|20:43:25.745]  - London:                      #0        (https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/london.md) 
+INFO [05-02|20:43:25.745]  
+INFO [05-02|20:43:25.745] The Merge is not yet available for this network! 
+INFO [05-02|20:43:25.745]  - Hard-fork specification: https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md 
+INFO [05-02|20:43:25.745]  
+INFO [05-02|20:43:25.745] Post-Merge hard forks (timestamp based): 
+INFO [05-02|20:43:25.745]  
+INFO [05-02|20:43:25.745] --------------------------------------------------------------------------------------------------------------------------------------------------------- 
+INFO [05-02|20:43:25.745]  
+INFO [05-02|20:43:25.745] Loaded most recent local block           number=0 hash=1edebd..e998ef td=1 age=54y1mo1w
+WARN [05-02|20:43:25.745] Failed to load snapshot                  err="missing or corrupted snapshot"
+INFO [05-02|20:43:25.746] Rebuilding state snapshot 
+INFO [05-02|20:43:25.746] Resuming state snapshot generation       root=b9f811..7985a9 accounts=0 slots=0 storage=0.00B dangling=0 elapsed=0s
+INFO [05-02|20:43:25.746] Generated state snapshot                 accounts=10 slots=0 storage=412.00B dangling=0 elapsed="538.9µs"
+INFO [05-02|20:43:25.748] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [05-02|20:43:25.748] Gasprice oracle is ignoring threshold set threshold=2
+WARN [05-02|20:43:25.749] Error reading unclean shutdown markers   error="leveldb: not found"
+WARN [05-02|20:43:25.749] Engine API enabled                       protocol=eth
+WARN [05-02|20:43:25.749] Engine API started but chain not configured for merge yet 
+INFO [05-02|20:43:25.749] Stored checkpoint snapshot to disk       number=0 hash=1edebd..e998ef
+INFO [05-02|20:43:25.749] Starting peer-to-peer node               instance=Geth/v1.11.6-stable-ea9e62ca/windows-amd64/go1.20.3
+WARN [05-02|20:43:25.749] P2P server will be useless, neither dialing nor listening 
+INFO [05-02|20:43:25.885] IPC endpoint opened                      url=\\.\pipe\geth.ipc
+INFO [05-02|20:43:25.886] New local node record                    seq=1,683,031,405,885 id=6c1d8e7d10637560 ip=127.0.0.1 udp=0 tcp=0
+INFO [05-02|20:43:25.886] Started P2P networking                   self=enode://39fec2ec00f13d1a59629285f9cefdaf13c0b19691f1d0d2034726649341ed2d0309289b7ac404dd00ba34ffb9b9a5b70c03a13d8af1fe19bb5ebbf38b9a48e8@127.0.0.1:0
+INFO [05-02|20:43:25.887] Generated JWT secret                     path=D:\zhuomian\sol\mde\ethereum\keystore\ethereum\geth\jwtsecret
+INFO [05-02|20:43:25.890] HTTP server started                      endpoint=127.0.0.1:8545 auth=false prefix= cors=https://remix.ethereum.org vhosts=localhost
+INFO [05-02|20:43:25.899] WebSocket enabled                        url=ws://127.0.0.1:8551
+INFO [05-02|20:43:25.899] HTTP server started                      endpoint=127.0.0.1:8551 auth=true  prefix= cors=localhost                  vhosts=localhost
+INFO [05-02|20:43:25.899] Transaction pool price threshold updated price=0
+INFO [05-02|20:43:25.899] Updated mining threads                   threads=0
+INFO [05-02|20:43:25.900] Transaction pool price threshold updated price=1
+INFO [05-02|20:43:25.900] Commit new sealing work                  number=1 sealhash=5ccedc..6cfe11 uncles=0 txs=0 gas=0 fees=0 elapsed=0s
+WARN [05-02|20:43:25.900] Block sealing failed                     err="sealing paused while waiting for transactions"
+INFO [05-02|20:43:25.901] Commit new sealing work                  number=1 sealhash=5ccedc..6cfe11 uncles=0 txs=0 gas=0 fees=0 elapsed="533.6µs"
+INFO [05-02|20:43:36.743] Setting new local account                address=0x227eaF314D090160e56975Bb2A4c07DAccda7D28
+INFO [05-02|20:43:36.743] Submitted contract creation              hash=0x22b12bab786c908642b88514881f4fd023fab8777e6dfda3c5a1e46ad90464a0 from=0x227eaF314D090160e56975Bb2A4c07DAccda7D28 nonce=0 contract=0x8Da38aEaD60aa0f2CAdba37b48160506bF60B4aC value=0
+INFO [05-02|20:43:36.744] Commit new sealing work                  number=1 sealhash=e0a7aa..2a13c5 uncles=0 txs=1 gas=708,769 fees=0.0017719225 elapsed="527.8µs"
+INFO [05-02|20:43:36.744] Successfully sealed new block            number=1 sealhash=e0a7aa..2a13c5 hash=fc8398..a89642 elapsed="605.1µs"
+INFO [05-02|20:43:36.744] "🔨 mined potential block"                number=1 hash=fc8398..a89642
+INFO [05-02|20:43:36.744] Commit new sealing work                  number=2 sealhash=b38e45..ff3bfc uncles=0 txs=0 gas=0       fees=0            elapsed=0s
+WARN [05-02|20:43:36.744] Block sealing failed                     err="sealing paused while waiting for transactions"
+INFO [05-02|20:43:36.745] Commit new sealing work                  number=2 sealhash=b38e45..ff3bfc uncles=0 txs=0 gas=0       fees=0            elapsed="525.6µs"
+INFO [05-02|21:19:58.559] Submitted transaction                    hash=0x90e564f8fb490edd4bce58092f33fc970407db942ea1b31e6def49e9484f8247 from=0x227eaF314D090160e56975Bb2A4c07DAccda7D28 nonce=1 recipient=0x8Da38aEaD60aa0f2CAdba37b48160506bF60B4aC value=0
+INFO [05-02|21:19:58.560] Commit new sealing work                  number=2 sealhash=f5a0b0..5bc046 uncles=0 txs=1 gas=162,595 fees=0.0004064875 elapsed="508.2µs"
+INFO [05-02|21:19:58.562] Successfully sealed new block            number=2 sealhash=f5a0b0..5bc046 hash=c4571f..694c58 elapsed=1.978ms
+INFO [05-02|21:19:58.562] "🔨 mined potential block"                number=2 hash=c4571f..694c58
+INFO [05-02|21:19:58.562] Commit new sealing work                  number=3 sealhash=336e99..b8b33a uncles=0 txs=0 gas=0       fees=0            elapsed="690.4µs"
+WARN [05-02|21:19:58.562] Block sealing failed                     err="sealing paused while waiting for transactions"
+INFO [05-02|21:19:58.562] Commit new sealing work                  number=3 sealhash=336e99..b8b33a uncles=0 txs=0 gas=0       fees=0            elapsed="690.4µs"
+INFO [05-02|21:32:27.031] Got interrupt, shutting down... 
+INFO [05-02|21:32:27.031] HTTP server stopped                      endpoint=127.0.0.1:8545
+INFO [05-02|21:32:27.032] HTTP server stopped                      endpoint=127.0.0.1:8551
+INFO [05-02|21:32:27.032] IPC endpoint closed                      url=\\.\pipe\geth.ipc
+INFO [05-02|21:32:27.032] Ethereum protocol stopped 
+INFO [05-02|21:32:27.032] Transaction pool stopped 
+INFO [05-02|21:32:27.033] Writing cached state to disk             block=2 hash=c4571f..694c58 root=6cbb70..7dbcf9
+INFO [05-02|21:32:27.033] Persisted trie from memory database      nodes=14 size=1.73KiB time=0s      gcnodes=0 gcsize=0.00B gctime=0s livenodes=5 livesize=762.00B
+INFO [05-02|21:32:27.033] Writing cached state to disk             block=1 hash=fc8398..a89642 root=6a574b..b2c7e3
+INFO [05-02|21:32:27.033] Persisted trie from memory database      nodes=4  size=762.00B time="532.5µs" gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [05-02|21:32:27.033] Writing snapshot state to disk           root=b9f811..7985a9
+INFO [05-02|21:32:27.033] Persisted trie from memory database      nodes=0  size=0.00B   time=0s        gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [05-02|21:32:27.033] Writing clean trie cache to disk         path=D:\zhuomian\sol\mde\ethereum\keystore\ethereum\geth\triecache threads=12
+INFO [05-02|21:32:27.150] Persisted the clean trie cache           path=D:\zhuomian\sol\mde\ethereum\keystore\ethereum\geth\triecache elapsed=117.268ms
+INFO [05-02|21:32:27.150] Blockchain stopped 

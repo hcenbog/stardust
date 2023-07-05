@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 33.333px;
+        fill: #4115b0;
+        font-family: FZLiShu-S01S;
+      }
+    </style>
+  </defs>
+  <image id="图层_0" data-name="图层 0" y="32" width="32" height="32" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAM0lEQVRYhe3OwREAIAzDsMD+O4djij4qL2Cdts1gd3L+AwAAAAAAAAAAAAAAAABYDkjyAE2IBDy3op79AAAAAElFTkSuQmCC"/>
+  <text id="星" class="cls-1" x="-0.333" y="27.333">星</text>
+</svg>

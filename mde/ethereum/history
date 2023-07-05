@@ -1,0 +1,50 @@
+var acc1=eth.accounts[0]
+var acc2=eth.accounts[1]
+acc1
+eth.sendTransaction({from: acc1 , to: acc2, value: web3.toWei(10000,"ether")})
+var acc1=eth.accounts[0]
+var acc2=eth.accounts[1]
+var acc3=eth.accounts[2]
+eth.sendTransaction({from: acc1 , to: acc2, value: web3.toWei(10000,"ether")})
+eth.sendTransaction({from: acc1 , to: acc3, value: web3.toWei(10000,"ether")})
+eth.sendTransaction({from: acc1 , to: acc4, value: web3.toWei(10000,"ether")})
+eth.accounts
+eth.accounts[0]
+web3.eth.accounts[0].privateKey
+eth.accounts
+eth.getPrivateKey('0x74366f63ed16db0c946ce09991ea354bca0c9602')
+eth.getPrivateKey('74366f63ed16db0c946ce09991ea354bca0c9602')
+eth.accounts[]
+eth.accounts
+eth.getBalance(eth.accounts[0])
+eth.getBalance(eth.accounts[1])
+eth.accounts
+eth.getBalance(eth.accounts[1])
+eth.getBalance(eth.accounts[2])
+eth.getBalance(eth.accounts[3])
+var acc1=eth.accounts[0]
+var acc2=eth.accounts[1]
+var acc3=eth.accounts[2]
+var acc4=eth.accounts[3]
+var acc5=eth.accounts[4]
+var acc6=eth.accounts[5]
+eth.sendTransaction({from: acc1 , to: acc2, value: web3.toWei(10000,"ether")})
+eth.sendTransaction({from: acc1 , to: acc3, value: web3.toWei(10000,"ether")})
+eth.sendTransaction({from: acc1 , to: acc4, value: web3.toWei(10000,"ether")})
+eth.sendTransaction({from: acc1 , to: acc5, value: web3.toWei(10000,"ether")})
+eth.sendTransaction({from: acc1 , to: acc6, value: web3.toWei(100000,"ether")})
+acc2
+var acc1=eth.accounts[0]
+var acc2=eth.accounts[1]
+acc2
+eth.sendTransaction({from: acc1 , to: acc2, value: web3.toWei(50000,"ether")})
+eth.getBalance(eth.accounts[1])
+eth.accounts
+var acc1=eth.accounts[0]
+var acc2=eth.accounts[1]
+eth.sendTransaction({from: acc1 , to: acc2, value: web3.toWei(50000,"ether")})
+var acc1=eth.accounts[0]
+var acc2=eth.accounts[1]
+acc2
+eth.sendTransaction({from: acc1 , to: acc2, value: web3.toWei(50000,"ether")})eth.sendTransaction({from: acc1 , to: acc2, value: web3.toWei(50000,"ether")})
+eth.sendTransaction({from: acc1 , to: acc2, value: web3.toWei(50000,"ether")})

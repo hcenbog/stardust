@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!--edge浏览器H5兼容设置-->
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <!--360浏览器H5兼容设置-->
+    <meta content="webkit" name="renderer"/>
+    <title>钢板在线商城</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!--导入核心文件-->
+    <link href="../../js/holder.js" rel="stylesheet" type="text/css">
+    <link href="../../common/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="../../common/jquery/jquery-3.6.1.min.js"></script>
+    <script src="../../common/bootstrap/js/bootstrap.js"></script>
+    <!-- 其余内容 -->
+    <link href="../../common/iconfont/css/iconfont.css" rel="stylesheet"/>
+    <link href="../../css/layout.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/footer.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/top.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/pack.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/imgmove.css" rel="stylesheet" type="text/css"/>
+    <script charset="utf-8" src="../../js/pack.js" type="text/javascript"></script>
+    <script charset="utf-8" src="../../js/imgmove.js" type="text/javascript"></script>
+</head>
+<body>
+<!--头部-->
+<header class="header">
+    <!--钢材商城logo-->
+    <div class="row">
+        <div class="col-md-3">
+            <a href="../../index.html">
+                <img alt=" " src="../../images/stumalllogo.png"/>
+            </a>
+        </div>
+        <!--快捷选项-->
+        <div class="col-md-9 top-item">
+            <ul class="list-inline pull-right">
+                <li><a href="cart.html"><span class="iconfont icon-gouwuche"></span>&nbsp;购物车</a></li>
+                <li class="li-split">|</li>
+                <li>
+                    <!--下列列表按钮 ：管理-->
+                    <div class="btn-group">
+                        <button class="btn btn-link dropdown-toggle" data-toggle="dropdown" type="button">
+									<span id="top-dropdown-btn"><span
+                                            class="iconfont icon-guanli"></span>&nbsp;管理 <span
+                                            class="caret"></span></span>
+                        </button>
+                        <ul class="dropdown-menu top-dropdown-ul" role="menu">
+                            <li><a href="../../web/order/forgetPwd.html"><span
+                                    class="iconfont icon-xiugai"></span>&nbsp;修改密码</a></li>
+                            <li><a href="../../web/order/publish.html"><span
+                                    class="iconfont icon-geren"></span>&nbsp;个人资料</a>
+                            </li>
+                            <li><a href="../../web/order/upload.html"><span
+                                    class="iconfont icon-shangchuan"></span>&nbsp;上传头像</a></li>
+                            <li><a href="../../web/order/address.html"><span
+                                    class="iconfont icon-shouhuo"></span>&nbsp;收货管理</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="li-split">|</li>
+                <li><a href="../../web/user/UserLogin.html"><span
+                        class="iconfont icon-denglu"></span>&nbsp;登录</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!--导航 -->
+<!--分割导航和顶部-->
+<div class="row top-nav">
+    <div class="col-md-6">
+        <ul class="nav nav-pills">
+            <li>
+                <a href="#"></a>
+            </li>
+            <li style="background-color:#d8d0d0;"><a href="../../index.html"><span
+                    class="iconfont icon-zhuye"></span></a></li>
+            <li><a href="../../index.html">首页</a></li>
+            <li><a href="shopping.html">商城</a></li>
+            <li><a href="../new/news.html">新闻</a></li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <form action="../../search.html" class="form-inline pull-right" role="form">
+            <div class="form-group">
+                <input class="form-control" id="search" name="search" placeholder="请输入商品名称进行搜索" type="text">
+            </div>
+            <button class="btn btn-default btn-sm" type="submit"><span
+                    class="iconfont icon-sousuo"></span></button>
+        </form>
+    </div>
+</div>
+<!--头部结束-->
+<!--导航结束-->
+<!--商品信息展示开始-->
+<div class="container">
+    <div class="col-md-offset-1 col-md-10">
+        <div class="col-md-6" style="background-color: aliceblue;">
+            <div class="img-big move-img col-md-12" data="1">
+                <img class="img-responsive" id="product-image-1-big" src="../../images/shop-big.png"/>
+            </div>
+            <div class="col-md-2 img-small" data="1">
+                <img class="img-responsive" id="product-image-1" src="../../images/shop.png"/>
+            </div>
+        </div>
+        <div class="col-md-6" style="background-color: gainsboro;">
+            <h3 class="col-md-12 title-row-1" id="product-title">热轧钢板&nbsp9*2250*6200&nbsp南钢</h3>
+            <p class="col-md-12 text-row-2" id="product-despatch-wh"><small>仓储：仅上海</small></p>
+            <div class="col-md-12 price-bar">
+                <small>限时抢购价：</small> ¥<span id="product-price">4899.00</span>
+                <div><small id="product-time">更新时间&nbsp;2023-03-15 15:00:13 </small></div>
+            </div>
+            <form class="form-inline product-form col-md-12" role="form">
+                <div class="col-md-12 form-space">
+                    <label for="num">数量：</label>
+                    <input class="num-btn" id="numDown" type="button" value="-"/>
+                    <input class="num-text" id="num" readonly="readonly" size="2" type="text" value="1">
+                    <input class="num-btn" id="numUp" type="button" value="+"/>
+                </div>
+                <div class="col-md-12 form-space">
+                    <p><small><b id="product-wh">发货仓库：上海</b>出库费：40.00元/吨</small></p>
+                </div>
+                <div class="col-md-12 form-space">
+                    <input class="btn btn-primary btn-lg btn-block" type="button" value="立即购买">
+                </div>
+                <div class="col-md-12 form-space">
+                    <button class="btn btn-default go-cart" id="btn-add-to-cart" type="button"><span
+                            class="fa fa-cart-plus"></span> 加入购物车
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <!--商品信息展示结束-->
+    <!--商品详情信息-->
+    <div class="col-md-offset-1 col-md-10">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title">商品详细信息</h2>
+            </div>
+            <!-- 信息页 -->
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-4"><b>产品名称：</b><span id="product-name-details">热轧钢板</span></div>
+                    <div class="col-md-4"><b>材质：</b><span id="product-texture-details">NQ1100E</span></div>
+                    <div class="col-md-4"><b>规格大小(厚*宽*长)：</b><span id="product-size-details">9*2250*6200</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4"><b>质量：</b><span id="product-qi-details">正品</span></div>
+                    <div class="col-md-4"><b>重量：</b><span id="product-weight-details">0.986</span><b>吨</b></div>
+                    <div class="col-md-4"><b>价格：</b><span id="product-price-details">4390</span><b>元</b></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4"><b>用途：</b><span id="product-purpose-details">容器用钢</span></div>
+                    <div class="col-md-4"><b>发货地址：</b><span id="despatch-details">南钢</span></div>
+                    <div class="col-md-4"><b>发货仓库：</b><span id="despatch-wh-details">上海</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--商品相情感信息结束-->
+    <!--售后信息开始-->
+    <div class="col-md-offset-1 col-md-10">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title">售后保障</h2>
+            </div>
+            <div class="panel-body ">
+                <div class="row">
+                    <div class="col-md-1 saled-icon"><span class="fa fa-wrench"></span></div>
+                    <div class="col-md-11 saled-title">厂家服务</div>
+                </div>
+                <div class="row">
+                    <p class="col-md-offset-1 col-md-11 saled-content">本产品享用交通运险</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-1 saled-icon"><span class="fa fa-reply"></span></div>
+                    <div class="col-md-11 saled-title">无忧退货</div>
+                </div>
+                <div class="saled-content">
+                    <small><b>权利声明：</b><br/>
+                        所有商品信息、商品咨询等内容，是商城重要的经营资源，未经许可，禁止非法转载使用。<br/>
+                        注：本站商品信息均来自于合作方，其真实性、准确性和合法性由信息拥有者（合作方）负责。本站不提供任何保证，并不承担任何法律责任。</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--页脚开始-->
+<div class="clearfix"></div>
+<footer class="footer">
+    <!-- 品质保障，私人定制等-->
+    <div class="text-center rights container">
+        <div class="col-md-offset-2 col-md-2">
+            <span class="iconfont icon-fuwu"></span>
+            <p>高质服务</p>
+        </div>
+        <div class="col-md-2">
+            <span class="iconfont icon-baozhang"></span>
+            <p>身份保障</p>
+        </div>
+        <div class="col-md-2">
+            <span class="iconfont icon-yunshuanquan"></span>
+            <p>运输安全</p>
+        </div>
+        <div class="col-md-2">
+            <span class="iconfont icon-jiaoyi"></span>
+            <p>交易安全</p>
+        </div>
+    </div>
+    <div class="container beforeBottom">
+        <div class="col-md-offset-1 col-md-3">
+            <div><img alt="" class="footLogo" src="../../images/stumalllogo.png"/></div>
+        </div>
+        <div class="col-md-4 callus text-center">
+            <div class="col-md-4">
+                <ul>
+                    <li><a href="#">
+                        <p>买家帮助</p>
+                    </a></li>
+                    <li><a href="#">新手指南</a></li>
+                    <li><a href="#">服务保障</a></li>
+                    <li><a href="#">常见问题</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul>
+                    <li><a href="#">
+                        <p>商家帮助</p>
+                    </a></li>
+                    <li><a href="#">商家入驻</a></li>
+                    <li><a href="#">商家后台</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul>
+                    <li><a href="#">
+                        <p>关于我们</p>
+                    </a></li>
+                    <li><a href="#">关于网站</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li>
+                        <span class="iconfont icon-weixin"></span>
+                        <span class="iconfont icon-weibo"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 页面底部-备案号 #footer -->
+    <div class="col-md-12 text-center bottom">
+        © 2023 京ICP备08963888号-45 <a href="#" target="_blank">钢板有限公司</a> 版权所有
+    </div>
+</footer>
+<!--页脚结束-->
+<script src="../../js/jquery-getUrlParam.js" type="text/javascript"></script>
+<script type="text/javascript">
+    let id = $.getUrlParam("id");
+    console.log("id=" + id);
+
+    $(document).ready(function () {
+        $.ajax({
+            url: "/products/" + id + "/details",
+            type: "GET",
+            dataType: "JSON",
+            success: function (json) {
+                if (json.state == 200) {
+                    var title = json.data.name + json.data.size + json.data.despatch;
+                    $("#product-title").html(title);
+                    $("#product-despatch-wh").html("仅" + json.data.despatchWh + "有货");
+                    $("#product-time").html("更新时间" + json.data.modifiedTime);
+                    $("#product-price").html(json.data.price);
+                    $("#num").html(json.data.quantity);
+                    $("#product-wh").html("发货仓库：" + json.data.despatchWh + " ");
+                    // 设置新添加的字段
+                    $("#product-name-details").html(json.data.name);
+                    $("#product-texture-details").html(json.data.texture);
+                    $("#product-size-details").html(json.data.size);
+                    $("#product-size-info-details").html(json.data.sizeInfo);
+                    $("#product-qi-details").html(json.data.qi);
+                    $("#product-quantity-details").html(json.data.quantity);
+                    $("#product-weight-details").html(json.data.weight);
+                    $("#product-price-details").html(json.data.price);
+                    $("#product-purpose-details").html(json.data.purpose);
+                    $("#despatch-details").html(json.data.despatch);
+                    $("#despatch-wh-details").html(json.data.despatchWh);
+                } else if (json.state == 4006) { // 商品数据不存在的异常
+                    location.href = "../../login.html";
+                } else {
+                    alert("获取商品信息失败！" + json.message);
+                }
+            }
+        });
+    });
+
+    $("#btn-add-to-cart").click(function () {
+        $.ajax({
+            url: "/carts/add_to_cart",
+            type: "POST",
+            data: {
+                "pid": id,
+                "amount": $("#num").val()
+            },
+            dataType: "JSON",
+            success: function (json) {
+                if (json.state === 200) {
+                    alert("增加成功！");
+                } else {
+                    alert("增加失败！" + json.message);
+                }
+            },
+            error: function (xhr) {
+                alert("您的登录信息已经过期，请重新登录！HTTP响应码：" + xhr.status);
+                location.href = "../../login.html";
+            }
+        });
+    });
+	
+	   //搜索
+    $(document).ready(function () {
+        $("#searchForm").on("submit", function (event) {
+            event.preventDefault();
+            searchProducts();
+        });
+    });
+    function searchProducts() {
+        var keyword = $("#searchBox").val();
+        $.ajax({
+            url: "/products/search",
+            method: "GET",
+            data: {keyword: keyword},
+            success: function (response) {
+                localStorage.setItem("searchResults", JSON.stringify(response));
+                localStorage.setItem("searchKeyword", keyword);
+                 window.location.href = "../order/search.html";
+            },
+            error: function (error) {
+                console.error("Error:", error);
+            }
+        });
+    }
+
+</script>
+</body>
+
+</html>

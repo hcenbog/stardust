@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.stardust.mapper.ProductMapper">
+    <resultMap id="ProductEntityMap" type="com.example.stardust.entity.Product">
+        <id column="id" property="id"/>
+        <result column="cat_id" property="catId"/>
+        <result column="name" property="name"/>
+        <result column="hot_steel" property="hotSteel"/>
+        <result column="texture" property="texture"/>
+        <result column="size" property="size"/>
+        <result column="size_info" property="sizeInfo"/>
+        <result column="qi" property="qi"/>
+        <result column="quantity" property="quantity"/>
+        <result column="weight" property="weight"/>
+        <result column="price" property="price"/>
+        <result column="purpose" property="purpose"/>
+        <result column="stock" property="stock"/>
+        <result column="despatch" property="despatch"/>
+        <result column="despatch_wh" property="despatchWh"/>
+        <result column="created_user" property="createdUser"/>
+        <result column="created_time" property="createdTime"/>
+        <result column="modified_user" property="modifiedUser"/>
+        <result column="modified_time" property="modifiedTime"/>
+    </resultMap>
+    <select id="findHotList" resultMap="ProductEntityMap">
+        SELECT *
+        FROM steel_sto
+        WHERE hot_steel = 100
+    </select>
+    <select id="findById" resultMap="ProductEntityMap">
+        SELECT *
+        FROM steel_sto
+        WHERE id = #{id}
+    </select>
+    <select id="searchKey" resultMap="ProductEntityMap">
+        SELECT id, name, price, size, texture
+        FROM steel_sto
+        WHERE name LIKE CONCAT('%', #{keyword}, '%')
+    </select>
+
+</mapper>

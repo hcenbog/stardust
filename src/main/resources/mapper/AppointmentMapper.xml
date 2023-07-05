@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace属性：用于指定当前的映射文件和那个接口进行映射，需要指定接口的文件路径，需要标注标注包的完整路径-->
+<mapper namespace="com.example.stardust.mapper.AppointmentMapper">
+    <resultMap id="AppointmentResultMap" type="com.example.stardust.entity.Appointment">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="phone" column="phone"/>
+        <result property="address" column="address"/>
+        <result property="pickupTime" column="pickup_time"/>
+        <result property="status" column="status"/>
+        <result property="createdUser" column="created_user"/>
+        <result property="createdTime" column="created_time"/>
+        <result property="modifiedUser" column="modified_user"/>
+        <result property="modifiedTime" column="modified_time"/>
+    </resultMap>
+    <!--    预约提货信息保存到数据库-->
+    <insert id="insertAddApp" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO gca_appointment(name, address, phone, pickup_time, status,
+                                    created_user, created_time,
+                                    modified_user, modified_time)
+        VALUES (#{name}, #{address}, #{phone}, #{pickupTime}, #{status},
+                #{createdUser}, #{createdTime},
+                #{modifiedUser}, #{modifiedTime})
+    </insert>
+    <!--    返回所有预约提货信息-->
+    <select id="getAllApp" resultMap="AppointmentResultMap">
+        SELECT *
+        FROM gca_appointment
+    </select>
+    <!--    获取预约提货信息-->
+    <select id="selectById" resultMap="AppointmentResultMap">
+        SELECT *
+        FROM gca_appointment
+        WHERE id = #{id}
+    </select>
+    <!--    更新预约提货信息-->
+    <update id="updateAppoint" parameterType="com.example.stardust.entity.Appointment">
+        UPDATE gca_appointment
+        SET name=#{name},
+            address = #{address},
+            name =#{name},
+            pickup_time=#{pickupTime},
+            status =#{status}
+        WHERE id = #{id}
+    </update>
+    <!--    数据库中删除预约提货信息-->
+    <delete id="deleteAppoint" parameterType="appointment">
+        DELETE
+        FROM gca_appointment
+        WHERE id = #{id}
+    </delete>
+</mapper>

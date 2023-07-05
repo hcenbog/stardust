@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.stardust.mapper.NewsMapper">
+    <resultMap id="NewsEntityMap" type="com.example.stardust.entity.News">
+        <id column="id" property="id"/>
+        <result column="news_path" property="newsPath"/>
+        <result column="news_time" property="newsTime"/>
+        <result column="news_name" property="newsName"/>
+        <result column="news_user" property="newsUser"/>
+        <result column="news_abs" property="newsAbs"/>
+        <result column="created_user" property="createdUser"/>
+        <result column="created_time" property="createdTime"/>
+        <result column="modified_user" property="modifiedUser"/>
+        <result column="modified_time" property="modifiedTime"/>
+    </resultMap>
+    <select id="getAllNews" resultMap="NewsEntityMap">
+        SELECT *
+        FROM gca_news
+    </select>
+
+    <select id="getNewsById" resultMap="NewsEntityMap" parameterType="java.lang.Integer">
+        SELECT *
+        FROM gca_news
+        WHERE id = #{id}
+    </select>
+</mapper>
